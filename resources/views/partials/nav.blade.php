@@ -9,10 +9,10 @@
 
             @guest
                 <li>
-                    <a href={{ route('sign_up.show') }} class="md:px-5 text-gray-50 flex items-center justify-between gap-2 manrope px-3 w-max py-2 rounded-md #bg-white text-sm shadow-md shadow-gray-900 border-2 border-amber-50 gradient hover:text-gray-100 hover:border-transparent hover:bg-[#a5793f] transition-all">Sign up <img src="{{ Vite::asset('resources/css/icon/sign_up.png') }}" class="w-5 h-5" /> </a>
+                    <a href={{ route('sign_up.show') }} class="md:px-5 text-gray-50 flex items-center justify-between gap-2 manrope px-3 w-max py-2 rounded-md #bg-white text-sm shadow-md shadow-gray-900 border-2 border-amber-50 gradient hover:text-gray-100 hover:border-transparent hover:bg-[#a5793f] transition-all">Sign up <img src="{{ asset('public/css/icon/sign_up.png') }}" class="w-5 h-5" /> </a>
                 </li>
                 <li>
-                    <a href={{ route('login') }} class="md:px-5 text-gray-50 flex items-center justify-between gap-2 manrope px-3 py-2 w-max rounded-md #bg-white text-sm shadow-md shadow-gray-900 border-2 border-amber-50 gradient hover:text-gray-100 hover:border-transparent hover:bg-[#a5793f] transition-all">Sign in <img src="{{ Vite::asset('resources/css/icon/sign_in_1.png') }}" class="w-5 h-5" /></a>
+                    <a href={{ route('login') }} class="md:px-5 text-gray-50 flex items-center justify-between gap-2 manrope px-3 py-2 w-max rounded-md #bg-white text-sm shadow-md shadow-gray-900 border-2 border-amber-50 gradient hover:text-gray-100 hover:border-transparent hover:bg-[#a5793f] transition-all">Sign in <img src="{{ asset('public/css/icon/sign_in_1.png') }}" class="w-5 h-5" /></a>
                 </li>
                 {{--  <li>
                     <p class="text-sm manrope text-gray-300">We have quality services at our best</p>
