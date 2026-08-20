@@ -26,7 +26,7 @@
             </h2>
         </div>
         <div class="md:mt-12 mt-7">
-            <a href="{{ route('rooms') }}" class="w-40 px-5 py-3 md:w-50 md:px-10 bg-white text-black rounded-3xl manrope text-sm flex items-center justify-center">Book a room <span><img src={{ asset('css/images/right_arrow.gif') }} alt="Arrow" class="ml-2 w-5 h-5"></span></a>
+            <a href="{{ route('rooms') }}" class="w-40 px-5 py-3 md:w-50 md:px-10 bg-white text-black rounded-3xl manrope text-sm flex items-center justify-center">Book a room <span><img src="{{ asset('css/images/right_arrow.gif') }}" alt="Arrow" class="ml-2 w-5 h-5"></span></a>
         </div>
 
     </div>
