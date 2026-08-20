@@ -1,0 +1,627 @@
+@import "tailwindcss";
+
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/Cinzel.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope.ttf') format('truetype');
+}
+
+.cinzel {
+    font-family: 'Cinzel', serif;
+}
+.manrope {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Glassy animation */
+ @keyframes spark-drift {
+    0%, 100% { opacity: 0.5; transform: scale(1) translate(0, 0); }
+    50% { opacity: 0.85; transform: scale(1.2) translate(10px, -10px); }
+  }
+  .spark-a { animation: spark-drift 8s ease-in-out infinite; }
+  .spark-b { animation: spark-drift 10s ease-in-out infinite reverse; animation-delay: 1.5s; }
+  .spark-c { animation: spark-drift 7s ease-in-out infinite; animation-delay: 3s; }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .shimmer-text {
+    background: linear-gradient(90deg, #d4af7a 0%, #f5e3b8 25%, #fdf6e3 50%, #f5e3b8 75%, #d4af7a 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  }
+/* Glassy animation */
+
+/* hero_layout */
+.hero_main{
+    @apply text-white;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/room-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.section_page{
+    @apply text-white;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/interior_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.services_section{
+    /* @apply text-white; */
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/house.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.about_section{
+    @apply text-white;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/interior_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.contact_section{
+    @apply text-white;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/interior_3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.footer_section{
+    @apply text-white;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/house.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.room_section{
+    @apply text-white;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/hotelroom.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.gradient_1{
+    background: linear-gradient(135deg, rgba(245,227,184,0.4), rgba(255,255,255,0.05) 40%, rgba(212,175,122,0.15));
+    box-shadow: 0 25px 60px -12px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.nav li{
+    list-style-type: none;
+}
+.nav li a{
+    @apply cursor-pointer;
+}
+.golden_color{
+    @apply text-[#a5793f];
+}
+.golden_background{
+    @apply bg-[#a5793f];
+}
+.advert_room_1{
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/room-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.advert_room_2{
+    background-image:url("./images/room-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    mask-image: linear-gradient(#fff 80%, transparent);
+}
+.advert_room_3{
+    background-image:url("./images/room-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    mask-image: linear-gradient(#fff 70%, transparent);
+}
+/* hero_layout */
+
+
+/* Authentication styling */
+.scaffold{
+    @apply text-white z-30;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/interior_3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.sign_up{
+    position:absolute;
+    top:-200%;
+    left:0%;
+}
+.sign_up.active{
+    transition:all 0.8s ease-in;
+    top:0%;
+    left:0%;
+    position:fixed;
+}
+
+.sign_in{
+    position:absolute;
+    top:-200%;
+    left:0%;
+}
+.sign_in.active{
+    transition:all 0.8s ease-in;
+    top:0%;
+    left:0%;
+    position:fixed;
+}
+
+.authentication input{
+    @apply px-4 py-1.5 rounded-md w-full mb-5 text-sm;
+    font-family:Manrope;
+    background: linear-gradient(135deg, rgba(245,227,184,0.4), rgba(255,255,255,0.05) 40%, rgba(212,175,122,0.15));
+    box-shadow: 0 25px 60px -12px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.authentication input[type="submit"]{
+    &:hover{
+        @apply bg-[#a5793f] cursor-pointer;
+        transition: all 0.2s ease-in;
+    }
+}
+/* Authentication styling */
+
+
+/* Dashboard styling */
+.dashboard{
+    @apply text-white overflow-hidden;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%),url('./images/room-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.left_admin_panel{
+    @apply lg:relative absolute md:absolute min-h-screen lg:w-1/4 w-3/4 px-6 py-6 -left-200 lg:left-0 ;
+    background: linear-gradient(135deg, rgba(245,227,184,0.4), rgba(255,255,255,0.05) 40%, rgba(212,175,122,0.15));
+    box-shadow: 0 25px 60px -12px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.left_admin_panel.open{
+    @apply left-0 top-20 lg:top-0 lg:left-0 transition-all duration-400 z-50 bg-black rounded-tr-lg;
+}
+.right_admin_panel{
+    overflow-x:hidden;
+}
+.hovered_items{
+    &:hover{
+        background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        cursor:pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    position:relative;
+}
+.home.active{
+    transition:all 0.5s ease-in-out;
+    @apply bg-[#a5793f] text-white;
+}
+.admin_home_panel_interface
+{
+    position:absolute;
+    left:200%;
+    content:"";
+    @apply w-full h-full;
+    transition:all 0.8s ease-in;
+}
+.admin_home_panel_interface.active
+{
+    transition:all 0.8s ease-in;
+    top:11.5%;
+    left:0%;
+}
+
+.admin_room_management_interface
+{
+    position:absolute;
+    left:200%;
+    content:"";
+    @apply w-full h-full;
+    transition:all 0.8s ease-in;
+}
+.room_management.active{
+    transition:all 0.5s ease-in-out;
+    @apply bg-[#a5793f] text-white;
+}
+.admin_room_management_interface.active
+{
+    transition:all 0.8s ease-in;
+    top:11.5%;
+    left:0%;
+}
+
+.admin_booking_management_interface{
+    position:absolute;
+    left:200%;
+    content:"";
+    @apply w-full h-full;
+    transition:all 0.8s ease-in;
+}
+.booking_management.active{
+    transition:all 0.5s ease-in-out;
+    @apply bg-[#a5793f] text-white;
+}
+.admin_booking_management_interface.active
+{
+    transition:all 0.8s ease-in;
+    top:11.5%;
+    left:0%;
+}
+
+.admin_payment_record_interface{
+    position:absolute;
+    left:200%;
+    content:"";
+    @apply w-full h-full;
+    transition:all 0.8s ease-in;
+}
+.payment_record.active{
+    transition:all 0.5s ease-in-out;
+    @apply bg-[#a5793f] text-white;
+}
+.admin_payment_record_interface.active
+{
+    transition:all 0.8s ease-in;
+    top:11.5%;
+    left:0%;
+}
+.admin_thumbs{
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    /* cursor:pointer; */
+    transition: all 0.2s ease-in-out;
+}
+.hotel_admin{
+    @apply text-white;
+    background: url('./images/hotel_admin.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.hotel_admin_1{
+    @apply text-white;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%), url('./images/hotel_admin.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.room_admin{
+    @apply text-white;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1fc9 0%, #0a0a0d 55%, #0000008c 100%), url('./images/room_admin.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.add_room_interface{
+    position:absolute;
+    left:0%;
+    top:-200%;
+    content:"";
+    /* @apply w-full h-full; */
+    transition:all 0.8s ease-in;
+}
+.add_room_interface.active{
+    transition:all 0.8s ease-in;
+    top:0;
+    left:0;
+}
+.add_room input{
+    @apply px-4 py-1.5 rounded-md w-full mb-5 text-sm;
+    font-family:Manrope;
+    background: linear-gradient(135deg, rgba(245,227,184,0.4), rgba(255,255,255,0.05) 40%, rgba(212,175,122,0.15));
+    box-shadow: 0 25px 60px -12px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08);
+    outline:none;
+    &:focus{
+        @apply bg-white text-gray-900;
+        transition: all 0.5s ease-in;
+    }
+}
+.add_room input[type="submit"]{
+    @apply bg-[#a5793f] cursor-pointer;
+}
+.view_all_rooms_interface{
+    position:absolute;
+    left:0%;
+    top:-200%;
+    content:"";
+    /* @apply w-full h-full; */
+    transition:all 0.8s ease-in;
+}
+.view_all_rooms_interface.active{
+    transition:all 0.8s ease-in;
+    top:0;
+    left:0;
+}
+.view_all_bookings_interface{
+    position:absolute;
+    left:0%;
+    top:-200%;
+    content:"";
+    /* @apply w-full h-full; */
+    transition:all 0.8s ease-in;
+}
+.view_all_bookings_interface.active{
+    transition:all 0.8s ease-in;
+    top:0;
+    left:0;
+}
+.view_payment_history_interface{
+    position:absolute;
+    left:0%;
+    top:-200%;
+    content:"";
+    /* @apply w-full h-full; */
+    transition:all 0.8s ease-in;
+}
+.view_payment_history_interface.active{
+    transition:all 0.8s ease-in;
+    top:0;
+    left:0;
+}
+
+.error_panel{
+    top:5%;
+    left:30%;
+    transition: all 1s ease-in;
+    display:none;
+}
+.error_panel.close{
+    top:5%;
+    left:-50%;
+}
+.error_section{
+    @apply w-full;
+    padding-left:35px;
+    border-left:2px solid rgba(0,0,0,.3);
+}
+.error_list{
+    list-style-type:none;
+}
+.error_list li{
+    margin-top:7px;
+    font-family:Manrope;
+    @apply text-sm font-light text-gray-800;
+}
+.success_message{
+    position:absolute;
+    content:"";
+    left:207.5%;
+    top:85%;
+    transition:all 1s ease-in-out;
+}
+.success_message.open{
+    left:80%;
+}
+
+.custom_overflow::-webkit-scrollbar{
+    background:transparent;
+    width:4px;
+}
+.custom_overflow::-webkit-scrollbar-thumb{
+    @apply bg-[#a5793f];
+    width:4px;
+    border-radius:7px;
+}
+
+.custom_overflow_x::-webkit-scrollbar{
+    background:transparent;
+    width:4px;
+    height:3px;
+    &:hover{
+        @apply bg-gray-800 transition-all duration-200 cursor-pointer;
+    }
+}
+.custom_overflow_x::-webkit-scrollbar-thumb{
+    @apply bg-[#a5793f];
+    width:4px;
+    border-radius:7px;
+}
+.preview_img{
+    width:149px;
+    height:120px;
+    object-fit:center;
+    border-radius:5px;
+    border:1px solid white;
+    z-index:3;
+}
+.show_item{
+    top:-50%;
+    left:0;
+    transition:all 0.5s ease-in;
+}
+.show_item.open{
+    top:0;
+    left:0%;
+}
+.preview_container{
+    position:relative;
+    content:"";
+    display:flex;
+    gap:3px
+}
+.remove_btn{
+    position:absolute;
+    content:"";
+    height:25px;
+    width:25px;
+    top:6px;
+    left:6px;
+    /* background-color:red; */
+    padding:3px;
+    border-radius:3px;
+    color:white;
+    transition:all 0.3s ease;
+    @apply text-sm font-medium z-20 flex items-center justify-center bg-[#a5793f] cursor-pointer shadow-md shadow-gray-700;
+
+    &:hover{
+        @apply bg-red-400 cursor-pointer;
+    }
+}
+
+
+/* Menu */
+
+.menu_btn{
+    @apply flex md:flex lg:hidden items-center justify-center h-10 w-10 overflow-hidden ;
+    position: relative;
+    cursor: pointer;
+}
+.menu_btn_burger{
+    @apply w-6 h-0.5 bg-gray-200 transition-all duration-300;
+}
+.menu_btn_burger::before, .menu_btn_burger::after{
+    content: '';
+    position: absolute;
+    @apply w-6 h-0.5 bg-gray-200 transition-all duration-300;
+}
+.menu_btn_burger::before{
+    transform: translateY(-8px);
+}
+.menu_btn_burger::after{
+    transform: translateY(8px);
+}
+.menu_btn.open .menu_btn_burger{
+    transform: translateX(-40px);
+    @apply bg-transparent;
+}
+
+/* Menu Animation */
+
+.menu_btn.open .menu_btn_burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu_btn.open .menu_btn_burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* Menu */
+
+
+/* Dashboard styling */
+
+
+/* Room Styling */
+.book_view{
+    &:hover{
+        @apply bg-[#a5793f] cursor-pointer;
+        transition: all 0.2s ease-in;
+    }
+}
+
+/* View_Room_Slider */
+
+.slider-container{
+    position: relative;
+    @apply w-300 rounded-md;
+    height:400px;
+    overflow:hidden;
+    box-shadow:0 4px 20px rgba(0,0,0,.1);
+}
+.slider-wrapper{
+    display:flex;
+    transition: transform 0.5s ease-in-out;
+    width:100%;
+    height:100%;
+}
+.slider-slide{
+    min-width: 100%;
+    height:100%;
+    position:relative;
+}
+.slider-slide img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.slider-nav{
+    position: absolute;
+    top:50%;
+    width:100%;
+    display:flex;
+    justify-content: space-between;;
+    transform: translateY(-50px);
+    pointer-events: none;
+}
+.slider-nav button{
+    background-color:rgba(0,0,0,.5);
+    border:none;
+    color:white;
+    padding:10px 15px;
+    cursor:pointer;
+    pointer-events: auto;
+    transition:background-color 0.4s ease;
+    border-radius:4px;;
+}
+.slider-nav button:hover{
+    background-color: rgba(0,0,0,.8);
+}
+.slider-dots{
+    position:absolute;
+    bottom:15px;
+    width:100%;
+    text-align: center;
+}
+.slider-dots span{
+    display: inline-block;
+    width:7px;
+    height:7px;
+    margin:0 4px;
+    background-color: #ccc;
+    border-radius:50%;
+    cursor:pointer;
+    transition: background-color 0.3s ease;
+}
+.slider-dots .active{
+    background-color: #333;
+}
+
+/* View_Room_Slider */
+
+/* Room Styling */
+
+
+/* Footer */
+.clipped_path_1{
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.clipped_path_2{
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.clipped_path_3{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+/* Footer */
+
+
