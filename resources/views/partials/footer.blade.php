@@ -4,16 +4,16 @@
         <p class="manrope text-md">Luxury<span class="w-4 h-4 rounded-full bg-white ml-2 mr-2"></span>Comfort<span class="w-4 h-4 rounded-full bg-white ml-2 mr-2"></span>Exceptional Hospitality</p>
         <div class="flex items-center justify-between lg:w-80 md:w-60 w-50">
             <div class="rounded-md bg-white px-2 py-2 w-10 h-10 flex items-center justify-center">
-                <img src={{Vite::asset('resources/css/icon/whatsapp.png')}} class="w-10 h-7" />
+                <img src={{asset('css/icon/whatsapp.png')}} class="w-10 h-7" />
             </div>
             <div class="rounded-md bg-white px-2 py-2 w-10 h-10 flex items-center justify-center">
-                <img src={{Vite::asset('resources/css/icon/instagram.png')}} class="w-10 h-7" />
+                <img src={{asset('css/icon/instagram.png')}} class="w-10 h-7" />
             </div>
             <div class="rounded-md bg-white px-2 py-2 w-10 h-10 flex items-center justify-center">
-                <img src={{Vite::asset('resources/css/icon/x.png')}} class="w-10 h-7" />
+                <img src={{asset('css/icon/x.png')}} class="w-10 h-7" />
             </div>
             <div class="rounded-md bg-white px-2 py-2 w-10 h-10 flex items-center justify-center">
-                <img src={{Vite::asset('resources/css/icon/facebook.png')}} class="w-10 h-7" />
+                <img src={{asset('css/icon/facebook.png')}} class="w-10 h-7" />
             </div>
         </div>
     </div>

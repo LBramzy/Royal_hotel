@@ -25,7 +25,7 @@
             </div>
             <div class="flex items-start justify-between w-full h-max flex-wrap lg:gap-0 md:gap-5">
                 <div class="rounded-sm gradient_1 px-6 py-6 mb-5 lg:w-87 md:w-76 w-full h-max">
-                    <img src={{ Vite::asset('resources/css/icon/luxurios_accomodation.png') }} class="mb-3 w-7 h-7" />
+                    <img src={{ asset('css/icon/luxurios_accomodation.png') }} class="mb-3 w-7 h-7" />
                     <h2 class="cinzel text-white text-lg mb-3 flex items-center">Luxury Accomodation</h2>
                     <p class="text-sm manrope text-gray-300 leading-5">
                         Elegant rooms and suites designed for comfort, privacy, and royal hospitality.
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="rounded-sm gradient_1 px-6 py-6 mb-5 lg:w-87 md:w-84 w-full h-max">
-                    <img src={{ Vite::asset('resources/css/icon/fine_dining.png') }} class="mb-3 w-7 h-7" />
+                    <img src={{ asset('css/icon/fine_dining.png') }} class="mb-3 w-7 h-7" />
                     <h2 class="cinzel text-white text-lg mb-3 flex items-center">Fine Dining</h2>
                     <p class="text-sm manrope text-gray-300 leading-5">
                         Exceptional local and international cuisine served in a refined atmosphere.
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="rounded-sm gradient_1 px-6 py-6 mb-5 lg:w-87 md:w-76 w-full h-max">
-                    <img src={{ Vite::asset('resources/css/icon/spa_and_wellness.png') }} class="mb-3 w-7 h-7" />
+                    <img src={{ asset('css/icon/spa_and_wellness.png') }} class="mb-3 w-7 h-7" />
                     <h2 class="cinzel text-white text-lg mb-3 flex items-center">Spa and Wellness</h2>
                     <p class="text-sm manrope text-gray-300 leading-5">
                         Rejuvenating spa treatments, massage therapy, and modern fitness facilities.
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="rounded-sm gradient_1 px-6 py-6 mb-5 lg:w-87 md:w-84 w-full h-max">
-                    <img src={{ Vite::asset('resources/css/icon/concierge_and_security.png') }} class="mb-3 w-7 h-7" />
+                    <img src={{ asset('css/icon/concierge_and_security.png') }} class="mb-3 w-7 h-7" />
                     <h2 class="cinzel text-white text-lg mb-3 flex items-center">24/7 Concierge & Security</h2>
                     <p class="text-sm manrope text-gray-300 leading-5">
                         Round-the-clock guest assistance with professional security and personalized care.
